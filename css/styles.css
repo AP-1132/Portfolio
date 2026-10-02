@@ -94,7 +94,7 @@ figure {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .site-nav nav a {
@@ -194,7 +194,7 @@ figure {
   border: #000 1px solid;
   padding-inline: 18px;
   background: var(--white);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .projects-section,
@@ -220,7 +220,7 @@ figure {
   font-weight: 560;
   letter-spacing: -0.055em;
   line-height: 0.95;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--white);
 }
 
@@ -282,7 +282,7 @@ figure {
   font-size: clamp(26px, 2.4vw, 36px);
   font-weight: 560;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--white);
 }
 
@@ -290,7 +290,7 @@ figure {
   color: var(--white);
 
   font-size: 13px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .page-intro {
@@ -301,10 +301,10 @@ figure {
 .project-header h1 {
   margin-top: 42px;
   font-size: clamp(72px, 10vw, 146px);
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: -0.075em;
   line-height: 0.78;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .about-section {
@@ -409,12 +409,15 @@ figure {
   font-size: 11px;
   font-weight: 650;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  background: var(--white);
+  padding: 4px 8px;
+  /* text-transform: uppercase; */
 }
 
 .contact-list strong {
   font-size: 19px;
   font-weight: 500;
+  /* background: var(--white); */
 }
 
 .contact-list b {
@@ -501,10 +504,10 @@ figure {
 .simple-project-header h1 {
   margin-top: 38px;
   font-size: clamp(72px, 10vw, 146px);
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: -0.075em;
   line-height: 0.82;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .simple-project-grid {
