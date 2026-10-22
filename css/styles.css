@@ -125,11 +125,38 @@ figure {
 }
 
 .hero {
-  display: flex;
+  display: grid;
   min-height: calc(100vh - 76px);
-  flex-direction: column;
   justify-content: space-evenly;
   padding-block: 54px 44px;
+}
+
+.hero-layout {
+  display: grid;
+  align-items: center;
+  gap: 8%;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+}
+
+.hero-content {
+  display: flex;
+  min-height: 570px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-title-group {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.hero-title-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
 }
 
 .project-text-header {
@@ -148,16 +175,14 @@ figure {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   background: var(--white);
+  width: max-content;
   padding: 4px 8px;
   color: var(--black);
   border: 1px solid var(--black);
 }
 
 .hero-copy {
-  display: grid;
-  align-items: end;
-  gap: 8%;
-  grid-template-columns: minmax(0, 2fr) minmax(280px, 0.75fr);
+  display: contents;
 }
 
 .hero h1 {
@@ -171,6 +196,39 @@ figure {
 .hero-intro {
   max-width: 420px;
   padding-bottom: 4px;
+}
+
+.hero-projects {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hero-project-card {
+  display: block;
+  color: var(--black);
+}
+
+.hero-project-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--white);
+  transition:
+    opacity 180ms ease,
+    transform 250ms ease;
+}
+
+.hero-project-card span {
+  display: block;
+  padding-top: 8px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.hero-project-card:hover img,
+.hero-project-card:focus-visible img {
+  opacity: 0.82;
+  transform: scale(1.018);
 }
 
 .hero-intro .eyebrow {
@@ -310,6 +368,7 @@ figure {
 .about-section {
   display: grid;
   align-items: start;
+  padding-top: 88px;
   padding-bottom: 150px;
   gap: 8%;
   grid-template-columns: minmax(300px, 0.83fr) minmax(400px, 1.17fr);
@@ -319,6 +378,8 @@ figure {
   height: min(680px, 58vw);
   object-fit: cover;
   object-position: center 28%;
+  border: 5px solid var(--transparentBlack);
+  box-shadow: var(--boxShadow);
 }
 
 .portrait figcaption {
@@ -494,11 +555,18 @@ figure {
 
 /* Simplified project detail */
 .simple-project {
+  display: flex;
+  width: min(calc(100% - 128px), var(--shell));
+  margin-inline: auto;
   padding-bottom: 140px;
+  flex-direction: column;
 }
 
 .simple-project-header {
+  width: auto;
+  margin: 0;
   padding-block: 88px 72px;
+  order: 1;
 }
 
 .simple-project-header h1 {
@@ -518,21 +586,26 @@ figure {
 
 .simple-project-grid-large {
   display: grid;
+  width: auto;
+  margin: 100px 0 0;
   gap: 28px;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  order: 3;
 }
 
-.simple-project-grid img {
-  height: min(45vw, 620px);
-  object-fit: cover;
+.simple-project-grid-large img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .simple-project-text {
-  display: grid;
-  padding-top: 100px;
-  margin-top: 100px;
-  gap: 9%;
-  grid-template-columns: 0.7fr 1.3fr;
+  display: block;
+  width: auto;
+  margin: 0;
+  order: 2;
 }
 
 .simple-project-text h2 {
@@ -591,8 +664,12 @@ figure {
     padding-block: 28px;
   }
 
-  .hero-copy {
+  .hero-layout {
     display: block;
+  }
+
+  .hero-content {
+    min-height: 0;
   }
 
   .hero h1 {
@@ -603,6 +680,11 @@ figure {
   .hero-intro {
     max-width: none;
     margin-top: 44px;
+  }
+
+  .hero-projects {
+    margin-top: 58px;
+    gap: 16px;
   }
 
   .hero-intro > p:last-child {
@@ -655,6 +737,7 @@ figure {
   }
 
   .about-section {
+    padding-top: 54px;
     padding-bottom: 80px;
   }
 
@@ -735,10 +818,13 @@ figure {
   }
 
   .simple-project {
+    display: block;
+    width: calc(100% - 44px);
     padding-bottom: 82px;
   }
 
   .simple-project-header {
+    width: auto;
     padding-block: 54px 44px;
   }
 
@@ -753,14 +839,21 @@ figure {
     grid-template-columns: 1fr;
   }
 
-  .simple-project-grid img {
-    height: 76vw;
+  .simple-project-grid-large {
+    width: auto;
+    margin-top: 58px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .simple-project-grid-large img {
+    width: 100%;
   }
 
   .simple-project-text {
     display: block;
-    padding-top: 58px;
-    margin-top: 68px;
+    width: auto;
+    padding-top: 0;
+    margin-top: 0;
   }
 
   .simple-project-text > p {

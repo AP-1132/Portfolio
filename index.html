@@ -15,26 +15,66 @@
       <a class="site-logo" href="index.html">Alonso Palmero</a>
       <nav aria-label="Primary navigation">
         <a class="active" href="index.html">Home</a>
-        <a href="about.html">About / Contact</a>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
       </nav>
     </header>
 
     <main>
       <section class="hero shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">Alonso<br />Palmero</h1>
-          <div class="hero-intro">
-            <p>
-              I am Web Developer and Designer interested in the space between
-              visual systems and thoughtful technology. I specialize in Web
-              Design and Development, with experience in UI/UX Design and
-              Front-End Development.
-            </p>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <div class="hero-title-group">
+              <h1 id="hero-title">Alonso<br />Palmero</h1>
+              <div class="hero-title-links">
+                <a class="down-link" href="about.html">About Me</a>
+                <a class="down-link" href="about.html#contact">Contact</a>
+              </div>
+            </div>
+            <div class="hero-intro">
+              <p>
+                I am Web Developer and Designer interested in the space between
+                visual systems and thoughtful technology. I specialize in Web
+                Design and Development, with experience in UI/UX Design and
+                Front-End Development.
+              </p>
+            </div>
+            <a class="down-link" href="#projects"
+              >View All Projects <span>↓</span></a
+            >
+          </div>
+
+          <div class="hero-projects" aria-label="Featured projects">
+            <a class="hero-project-card" href="project1.html">
+              <img
+                src="./images/instead/instead-thumb.png"
+                alt="Instead App project preview"
+              />
+              <span>Instead App</span>
+            </a>
+            <a class="hero-project-card" href="project2.html">
+              <img
+                src="./images/askme/askme-thumb.png"
+                alt="AskMe AI project preview"
+              />
+              <span>AskMe AI</span>
+            </a>
+            <a class="hero-project-card" href="project3.html">
+              <img
+                src="./images/museum/Home.png"
+                alt="Museum Exhibit UI Mockup project preview"
+              />
+              <span>Museum Exhibit</span>
+            </a>
+            <a class="hero-project-card" href="project4.html">
+              <img
+                src="./images/app/app-screens.png"
+                alt="Mobile App Prototype project preview"
+              />
+              <span>Mobile App</span>
+            </a>
           </div>
         </div>
-        <a class="down-link" href="#projects"
-          >View My Projects <span>↓</span></a
-        >
       </section>
 
       <section
@@ -139,7 +179,8 @@
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="index.html">Home</a>
-          <a href="about.html">About / Contact</a>
+          <a href="about.html">About</a>
+          <a href="about.html#contact">Contact</a>
         </nav>
       </div>
     </footer>
