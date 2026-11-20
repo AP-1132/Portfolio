@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Instead App by Alonso Palmero." />
-    <title>Instead App — Alonso Palmero</title>
+    <meta
+      name="description"
+      content="Mobile App Prototype by Alonso Palmero."
+    />
+    <title>Mobile App Prototype — Alonso Palmero</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/css/lightgallery-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/css/lg-justified.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/plugins/justified/lg-justified.umd.js"></script>
+    <script src="app/app.js" defer></script>
   </head>
   <body>
     <header class="site-nav">
@@ -13,32 +27,26 @@
       <nav aria-label="Primary navigation">
         <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="about.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
 
     <main class="simple-project">
       <header class="simple-project-header shell">
-        <h1>Instead App</h1>
+        <h1>Mobile App Prototype</h1>
+        <div class="project-skills">
+          <h3>Technology and Skills Used</h3>
+          <p>UI/UX, Prototyping, Mobile App Design, Adobe XD</p>
+        </div>
       </header>
 
-      <div class="simple-project-grid-large shell">
-        <img
-          src="./images/instead/fullscreen-view.png"
-          alt="Minimal gray concrete architecture against a blue sky"
-        />
-        <img
-          src="./images/instead/reality-toggle.png"
-          alt="Geometric detail of a modern building"
-        />
-        <img
-          src="./images/instead/transaction-list.png"
-          alt="Patterned facade of a high-rise building"
-        />
-        <img
-          src="./images/instead/diagram.png"
-          alt="Airplane crossing the sky above modern architecture"
-        />
+      <div class="simple-project-grid-large shell lightgallery lg-justified">
+        <a href="./images/app/app-screens.png">
+          <img src="./images/app/app-screens.png" alt="Mobile app screens" />
+        </a>
+        <a href="./images/app/app-flow.png">
+          <img src="./images/app/app-flow.png" alt="Mobile app flow" />
+        </a>
       </div>
 
       <section
@@ -49,30 +57,16 @@
           <h2 id="project-text-title">Project Overview</h2>
           <a
             class="section-index"
-            href="https://github.com/AP-1132/instead-app"
+            href="https://xd.adobe.com/view/4b794bb3-e443-435e-bfa9-241552e6e44f-1e2a/"
             target="_blank"
-            >Project GitHub Repository</a
+            >Link to Prototype</a
           >
+
           <p>
-            Instead is an interactive financial dashboard designed for spenders
-            who want to transform boring budget tracking into a visual
-            narrative. Traditional financial apps act as passive ledgers,
-            showing users where their money went, but fail to provide the
-            psychological motivation needed to stop impulsive spending.
-          </p>
-          <p>
-            This app implements Alpha Vantage's API to provide users with
-            comparisions between their spending habits and the stock market,
-            allowing them to visualize the opportunity cost of their purchases.
-          </p>
-          <p>
-            This app also implements Google Gemini's API to provide the user
-            with a personalized AI insight into their spending habits
-          </p>
-          <h3>Technology and Skills Used</h3>
-          <p>
-            HTML, JavaScript, CSS, Object-Oriented Programming, JS Classes, API
-            Integration
+            This is a functional working interactive mobile app UI prototype of
+            a retro video game store, VaultPlay. This prototype was created
+            using Adobe XD and is interactive, allowing users to navigate
+            through the app's screens and experience its flow.
           </p>
         </div>
       </section>
@@ -114,7 +108,7 @@
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="about.html#contact">Contact</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </footer>

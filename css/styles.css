@@ -2,7 +2,7 @@
 
 :root {
   --sky: #87ceeb;
-  --skyTransparent: #87ceeb88;
+  --skyTransparent: #9d9d9d43;
   --black: #000;
   --white: #fff;
   --muted: #51626a;
@@ -31,6 +31,37 @@ body {
   font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 17px;
   line-height: 1.5;
+}
+
+.contact-page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page main {
+  display: flex;
+  flex: 1;
+}
+
+.contact-page .contact-section {
+  width: min(calc(100% - 128px), var(--shell));
+  align-content: center;
+  padding-block: 80px;
+  gap: 9%;
+}
+
+.contact-page .contact-section h2 {
+  margin: 0;
+}
+
+.contact-page .contact-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page .contact-list a {
+  padding-block: 16px;
 }
 
 body::before {
@@ -155,8 +186,16 @@ figure {
 .hero-title-links {
   display: flex;
   flex-wrap: wrap;
+  width: min(452px, 100%);
   gap: 12px;
   margin-top: 28px;
+}
+
+.hero-title-links .down-link {
+  flex: 1 1 220px;
+  width: auto;
+  min-width: 220px;
+  justify-content: center;
 }
 
 .project-text-header {
@@ -164,6 +203,34 @@ figure {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 20px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-text-header .section-index {
+  min-height: 44px;
+  align-items: center;
+  display: inline-flex;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: var(--boxShadow);
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.project-text-header .section-index:hover,
+.project-text-header .section-index:focus-visible {
+  color: var(--white);
+  background: var(--black);
+  transform: translateY(-2px);
 }
 
 .hero-label,
@@ -178,7 +245,7 @@ figure {
   width: max-content;
   padding: 4px 8px;
   color: var(--black);
-  border: 1px solid var(--black);
+  /* border: 1px solid var(--black); */
 }
 
 .hero-copy {
@@ -188,7 +255,7 @@ figure {
 .hero h1 {
   font-size: clamp(72px, 10vw, 156px);
   font-stretch: condensed;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.075em;
   line-height: 0.77;
 }
@@ -199,9 +266,7 @@ figure {
 }
 
 .hero-projects {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
 }
 
 .hero-project-card {
@@ -216,6 +281,7 @@ figure {
   transition:
     opacity 180ms ease,
     transform 250ms ease;
+  box-shadow: var(--boxShadow);
 }
 
 .hero-project-card span {
@@ -231,6 +297,46 @@ figure {
   transform: scale(1.018);
 }
 
+.hero-projects .splide__track {
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.hero-projects .splide__pagination {
+  bottom: -8px;
+}
+
+.hero-projects .splide__pagination__page {
+  width: 50px;
+  height: 18px;
+  margin: 6px;
+  border: 1px solid var(--white);
+  border-radius: 0;
+  background: var(--white);
+  opacity: 0.55;
+}
+
+.hero-projects .splide__pagination__page.is-active {
+  background: var(--white);
+  opacity: 1;
+  transform: none;
+}
+
+.hero-projects .splide__arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
+  background: var(--white);
+  border: 1px solid var(--black);
+  opacity: 1;
+}
+
+.hero-projects .splide__arrow svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--black);
+}
+
 .hero-intro .eyebrow {
   padding-bottom: 18px;
   margin-bottom: 18px;
@@ -243,16 +349,29 @@ figure {
 
 .down-link {
   display: flex;
-  width: 190px;
+  width: min(220px, 100%);
+  min-height: 44px;
+  align-items: center;
   justify-content: space-between;
-  font-size: 13px;
-  font-weight: 650;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 0.04em;
-  padding-block: 10px;
-  border: #000 1px solid;
-  padding-inline: 18px;
+  padding: 10px 14px;
+  /* border: 1px solid var(--black); */
   background: var(--white);
+  box-shadow: var(--boxShadow);
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
   /* text-transform: uppercase; */
+}
+
+.down-link:hover,
+.down-link:focus-visible {
+  color: var(--white);
+  background: var(--black);
+  transform: translateY(-2px);
 }
 
 .projects-section,
@@ -374,11 +493,14 @@ figure {
   grid-template-columns: minmax(300px, 0.83fr) minmax(400px, 1.17fr);
 }
 
+.portrait {
+  align-self: center;
+}
+
 .portrait img {
-  height: min(680px, 58vw);
+  height: min(450px, 108vw);
   object-fit: cover;
   object-position: center 28%;
-  border: 5px solid var(--transparentBlack);
   box-shadow: var(--boxShadow);
 }
 
@@ -400,21 +522,21 @@ figure {
 }
 
 .about-copy .lead {
-  max-width: 720px;
-  padding-bottom: 34px;
-  font-size: clamp(22px, 2.2vw, 32px);
+  max-width: none;
+  padding-bottom: 0;
+  font-size: clamp(18px, 1.45vw, 22px);
   line-height: 1.2;
 }
 
-.two-column-copy {
+.three-column-copy {
   display: grid;
-  padding-top: 28px;
   gap: 34px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .skills-section {
   padding-block: 110px 130px;
+  box-shadow: var(--boxShadow);
 }
 
 .section-heading.compact {
@@ -555,27 +677,48 @@ figure {
 
 /* Simplified project detail */
 .simple-project {
-  display: flex;
+  display: grid;
   width: min(calc(100% - 128px), var(--shell));
   margin-inline: auto;
   padding-bottom: 140px;
-  flex-direction: column;
+  column-gap: 6%;
+  grid-template-columns: minmax(300px, 0.75fr) minmax(0, 1.25fr);
+  grid-template-rows: auto 1fr;
 }
 
 .simple-project-header {
   width: auto;
   margin: 0;
   padding-block: 88px 72px;
-  order: 1;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .simple-project-header h1 {
   margin-top: 38px;
-  font-size: clamp(72px, 10vw, 146px);
+  max-width: 100%;
+  font-size: clamp(52px, 6vw, 96px);
   font-weight: 300;
   letter-spacing: -0.075em;
   line-height: 0.82;
+  overflow-wrap: break-word;
   /* text-transform: uppercase; */
+}
+
+.project-skills {
+  margin-top: 32px;
+}
+
+.project-skills h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.project-skills p {
+  max-width: 520px;
+  line-height: 1.45;
 }
 
 .simple-project-grid {
@@ -585,17 +728,49 @@ figure {
 }
 
 .simple-project-grid-large {
-  display: grid;
   width: auto;
-  margin: 100px 0 0;
-  gap: 28px;
-  align-items: center;
-  justify-items: center;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  order: 3;
+  margin: 88px 0 0;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 .simple-project-grid-large img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.simple-project-grid-large a {
+  display: block;
+  width: 100%;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.simple-project-grid-large a img {
+  transition:
+    transform 300ms ease,
+    filter 300ms ease;
+}
+
+.simple-project-grid-large a:hover img,
+.simple-project-grid-large a:focus-visible img {
+  filter: brightness(0.92);
+  transform: scale(1.025);
+}
+
+.simple-project-grid-large.askme-gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.simple-project-grid-large.askme-gallery a {
+  width: 100%;
+}
+
+.simple-project-grid-large.askme-gallery img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -605,7 +780,8 @@ figure {
   display: block;
   width: auto;
   margin: 0;
-  order: 2;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .simple-project-text h2 {
@@ -742,8 +918,8 @@ figure {
   }
 
   .portrait img {
-    height: 115vw;
-    max-height: 620px;
+    height: 95vw;
+    max-height: 520px;
   }
 
   .about-copy {
@@ -756,12 +932,12 @@ figure {
     font-size: 46px;
   }
 
-  .two-column-copy,
+  .three-column-copy,
   .skills-list {
     grid-template-columns: 1fr;
   }
 
-  .two-column-copy {
+  .three-column-copy {
     gap: 20px;
   }
 
@@ -776,6 +952,20 @@ figure {
 
   .contact-section {
     padding-block: 82px 92px;
+  }
+
+  .contact-page .contact-section {
+    align-content: start;
+    padding-block: 54px 64px;
+    gap: 24px;
+  }
+
+  .contact-page .contact-list {
+    margin-top: 0;
+  }
+
+  .contact-page .contact-list a {
+    padding-block: 14px;
   }
 
   .contact-list {
@@ -842,7 +1032,6 @@ figure {
   .simple-project-grid-large {
     width: auto;
     margin-top: 58px;
-    grid-template-columns: minmax(0, 1fr);
   }
 
   .simple-project-grid-large img {

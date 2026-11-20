@@ -8,6 +8,12 @@
       content="Portfolio of FirstName LastName, a web developer and designer."
     />
     <title>Alonso Palmero — Web Developer &amp; Designer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="app/app.js" defer></script>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -16,7 +22,7 @@
       <nav aria-label="Primary navigation">
         <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="about.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
 
@@ -28,7 +34,7 @@
               <h1 id="hero-title">Alonso<br />Palmero</h1>
               <div class="hero-title-links">
                 <a class="down-link" href="about.html">About Me</a>
-                <a class="down-link" href="about.html#contact">Contact</a>
+                <a class="down-link" href="contact.html">Contact</a>
               </div>
             </div>
             <div class="hero-intro">
@@ -44,35 +50,47 @@
             >
           </div>
 
-          <div class="hero-projects" aria-label="Featured projects">
-            <a class="hero-project-card" href="project1.html">
-              <img
-                src="./images/instead/instead-thumb.png"
-                alt="Instead App project preview"
-              />
-              <span>Instead App</span>
-            </a>
-            <a class="hero-project-card" href="project2.html">
-              <img
-                src="./images/askme/askme-thumb.png"
-                alt="AskMe AI project preview"
-              />
-              <span>AskMe AI</span>
-            </a>
-            <a class="hero-project-card" href="project3.html">
-              <img
-                src="./images/museum/Home.png"
-                alt="Museum Exhibit UI Mockup project preview"
-              />
-              <span>Museum Exhibit</span>
-            </a>
-            <a class="hero-project-card" href="project4.html">
-              <img
-                src="./images/app/app-screens.png"
-                alt="Mobile App Prototype project preview"
-              />
-              <span>Mobile App</span>
-            </a>
+          <div class="splide hero-projects" aria-label="Featured projects">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <a class="hero-project-card" href="instead-app.html">
+                    <img
+                      src="./images/instead/instead-thumb.png"
+                      alt="Instead App project preview"
+                    />
+                    <span>Instead App</span>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a class="hero-project-card" href="askme-ai-app.html">
+                    <img
+                      src="./images/askme/askme-thumb.png"
+                      alt="AskMe AI project preview"
+                    />
+                    <span>AskMe AI</span>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a class="hero-project-card" href="museum-ui.html">
+                    <img
+                      src="./images/museum/Home.png"
+                      alt="Museum Exhibit UI Mockup project preview"
+                    />
+                    <span>Museum Exhibit</span>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a class="hero-project-card" href="mobile-prototype.html">
+                    <img
+                      src="./images/app/app-screens.png"
+                      alt="Mobile App Prototype project preview"
+                    />
+                    <span>Mobile App</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -88,7 +106,7 @@
           </div>
 
           <div class="project-grid">
-            <a class="project-card" href="project1.html">
+            <a class="project-card" href="instead-app.html">
               <div class="project-image">
                 <img
                   src="./images/instead/instead-thumb.png"
@@ -101,7 +119,7 @@
               </div>
             </a>
 
-            <a class="project-card" href="project2.html">
+            <a class="project-card" href="askme-ai-app.html">
               <div class="project-image">
                 <img
                   src="./images/askme/askme-thumb.png"
@@ -110,11 +128,11 @@
               </div>
               <div class="project-caption">
                 <h3>AskMe AI</h3>
-                <p>Web Application 2026</p>
+                <p>Web App 2026</p>
               </div>
             </a>
 
-            <a class="project-card" href="project3.html">
+            <a class="project-card" href="museum-ui.html">
               <div class="project-image">
                 <img
                   src="./images/museum/Home.png"
@@ -127,7 +145,7 @@
               </div>
             </a>
 
-            <a class="project-card" href="project4.html">
+            <a class="project-card" href="mobile-prototype.html">
               <div class="project-image">
                 <img
                   src="./images/app/app-screens.png"
@@ -180,7 +198,7 @@
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="about.html#contact">Contact</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </footer>

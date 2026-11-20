@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="AskMe AI by Alonso Palmero." />
     <title>AskMe AI — Alonso Palmero</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/css/lightgallery-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/css/lg-justified.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@3.0.0/plugins/justified/lg-justified.umd.js"></script>
+    <script src="app/app.js" defer></script>
   </head>
   <body>
     <header class="site-nav">
@@ -13,24 +24,37 @@
       <nav aria-label="Primary navigation">
         <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="about.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
 
     <main class="simple-project">
       <header class="simple-project-header shell">
         <h1>AskMe AI</h1>
+        <div class="project-skills">
+          <h3>Technology and Skills Used</h3>
+          <p>
+            Next.js, JavaScript, Dynamic Routing, Component Based Architecture,
+            Smart State Management, API Integrations
+          </p>
+        </div>
       </header>
 
-      <div class="simple-project-grid-large shell">
-        <img
-          src="./images/askme/askme-screen.png"
-          alt="Minimal gray concrete architecture against a blue sky"
-        />
-        <img
-          src="./images/askme/askme-chat.png"
-          alt="Geometric detail of a modern building"
-        />
+      <div
+        class="simple-project-grid-large shell lightgallery askme-gallery"
+      >
+        <a href="./images/askme/askme-screen.png">
+          <img
+            src="./images/askme/askme-screen.png"
+            alt="AskMe AI screen"
+          />
+        </a>
+        <a href="./images/askme/askme-chat.png">
+          <img
+            src="./images/askme/askme-chat.png"
+            alt="AskMe AI chat"
+          />
+        </a>
       </div>
 
       <section
@@ -39,12 +63,22 @@
       >
         <div class="project-text-header">
           <h2 id="project-text-title">Project Overview</h2>
-          <a
-            class="section-index"
-            href="https://github.com/AP-1132/ask-me-ai-n317final"
-            target="_blank"
-            >Project GitHub Repository</a
-          >
+          <div class="project-links">
+            <a
+              class="section-index"
+              href="https://github.com/AP-1132/ask-me-ai-n317final"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Project GitHub Repository</a
+            >
+            <a
+              class="section-index"
+              href="https://ask-me-ai-n317final.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Live Website</a
+            >
+          </div>
           <p>
             AskMe AI, a simple and conversational web app that acts as a
             personal knowledge assistant. The idea is to give users a clean,
@@ -61,11 +95,6 @@
             My role in this project was being the routing and backend
             integrator. My role consisted of implementing dynamic routing in
             Next.js for individual chat sessions and app navigation.
-          </p>
-          <h3>Technology and Skills Used</h3>
-          <p>
-            Next.js, JavaScript, Dynamic Routing, Component Based Architecture,
-            Smart State Management, API Integrations
           </p>
         </div>
       </section>
@@ -107,7 +136,7 @@
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="about.html#contact">Contact</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </footer>
