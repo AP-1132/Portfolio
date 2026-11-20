@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  padding-top: 76px;
   color: var(--black);
   background-color: var(--skyTransparent);
   background-image: url("https://images.unsplash.com/photo-1592698117601-70c282996f9c?auto=format&fit=crop&w=2200&q=88");
@@ -97,7 +98,10 @@ figure {
 }
 
 .site-nav {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 10;
   display: flex;
   min-height: 76px;
@@ -803,6 +807,7 @@ figure {
 
 @media (max-width: 820px) {
   body {
+    padding-top: 68px;
     background-attachment: scroll;
   }
 
